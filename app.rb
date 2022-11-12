@@ -1,10 +1,14 @@
 require 'sinatra'
 require 'sinatra/json'
 
-get '/' do
-  song = {
-    "id" => 1
-    "name" => "waikau"
+user_profiles = [
+  {
+    id: '1',
+    name: 'harrison'
   }
-  json(song)
+]
+
+# return a string
+get '/' do 
+  return 'hello world'
 end
