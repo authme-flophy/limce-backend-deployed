@@ -1,5 +1,10 @@
 require 'sinatra'
 
+set :default_content_type, 'application/json'
 get '/' do
-  'Choo Choo! Welcome to your Sinatra server 🚅'
+  song = {
+    id: 1
+    name: "waikau"
+  }
+  song.to_json
 end
