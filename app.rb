@@ -1,10 +1,10 @@
 require 'sinatra'
+require 'sinatra/json'
 
-set :default_content_type, 'application/json'
 get '/' do
   song = {
     "id" => 1
     "name" => "waikau"
   }
-  song.to_json
+  json(song)
 end
